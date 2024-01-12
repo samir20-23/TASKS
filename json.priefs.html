@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+  
+
+
+  <script>
+   
+    //element
+    let to = document.createElement("div");
+    let inn = document.createElement("input");
+    let in1 = document.createElement("input");
+    let in2 = document.createElement("input");
+    let lable =  document.createElement("lable");
+    let in3 = document.createElement("input");
+    let lable2 =  document.createElement("lable");
+    let in4 = document.createElement("input");
+    let lable3 =  document.createElement("lable");
+    let in5 =document.createElement("input");
+    let lable4 =  document.createElement("lable");
+    let btn = document.createElement("button");
+    let axn  =document.createElement("p")
+ 
+    //placeholder
+ inn.placeholder="tol";
+ in1.placeholder="cm";
+ in2.placeholder="age";
+
+    //type
+  in1.type="number";
+  in2.type="number";
+  inn.type="number";
+  in3.type="checkbox";
+  in4.type="checkbox";
+  in5.type="checkbox";
+    //class
+  to.classList="to";
+  inn.classList="inn"
+  in1.classList="in1";
+  in2.classList="in2";
+  lable.classList="lable";
+  in3.classList="in3";
+  in4.classList="in4";
+  in5.classList="in5";
+  btn.classList="btn";
+  axn.classList="axn"
+  //body
+document.body.appendChild(to)
+to.appendChild(in1)
+to.appendChild(in2)
+to.appendChild(inn)
+to.appendChild(lable)
+to.appendChild(in3)
+to.appendChild(lable2)
+to.appendChild(in4)
+to.appendChild(lable3)
+to.appendChild(in5)
+to.appendChild(lable4)
+to.appendChild(btn)
+to.appendChild(axn)
+// content
+btn.textContent="cliak";
+lable.textContent="you?:";
+lable2.textContent="max";
+lable3.textContent="normal";
+lable4.textContent="min";
+//calc
+
+
+btn.addEventListener("click", function(){
+
+  let v = inn.value / ((in1.value - 100) + (in2.value / 10));
+
+let v1, v2;
+
+if (v === 1) {
+    v1 = ((in1.value - 100) + (in2.value / 10)) * 0.9;
+    v2 = ((in1.value - 100) + (in2.value / 10)) * 1.1;
+  } else {
+    v1 = ((in1.value - 100) + (in2.value / 10)) * 0.9 * 0.9;
+    v2 = ((in1.value - 100) + (in2.value / 10)) * 0.9 * 1.1;
+  }
+axn.innerHTML = "Poids idéal: " + v1.toFixed(2) + " kg à " + v2.toFixed(2) + " kg";
+   
+})
+
+
+
+  </script>
+</body>
+</html>
