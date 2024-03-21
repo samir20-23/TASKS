@@ -1,0 +1,32 @@
+body{
+       
+
+    color: rgb(0, 255, 255);
+}
+li {
+  list-style: none;
+  padding: 10px;
+  background-color: #000000;
+  border-bottom: 1px solid rgb(0, 47, 255);
+  cursor: pointer;
+}
+
+input {
+  padding: 10px;
+  width: 10%;
+  background: linear-gradient(135deg, rgb(218, 232, 247) 0%, rgb(214, 229, 247) 100%);
+  border: none;
+  color: #9EBCD9;
+  font-size: 20px;
+  border-radius: 50px;
+  position: relative;
+  left: 45%;
+}
+
+input:focus {
+  outline: none;
+  background: linear-gradient(135deg, rgb(239, 247, 255) 0%, rgb(214, 229, 247) 100%);
+}
+
+
+ 
