@@ -1,19 +1,25 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     let contentDiv = document.getElementById("content");
-    let pageNumber = 1;
+    
   
     function fetchAnimeData() {
-      return fetch('https://api.jikan.moe/v4/top/anime?filter=bypopularity')
-        .then(response => response.json())
-        .then(data => {
-          console.log(data)
+     fetch("api.json")
+     .then(response => response.json())
+     .then(data => {
+      let url = data.url;
+      return fetch(url)
+     })
+
+
+      .then(response => response.json())
+      .then(data => {
+          
           data.data.forEach(item => {
           console.log(item)
             let animeElement = createAnimeElement(item);
             contentDiv.appendChild(animeElement);
           });
-          pageNumber++;
         })
         .catch(error => console.error('Error:', error));
     }
